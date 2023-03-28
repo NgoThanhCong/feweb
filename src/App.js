@@ -6,14 +6,9 @@ import Login from './page/admin/Login'
 
 function App() {
   return (
-    <BrowserRouter>
-          
-                <Routes>
-                    <Route path='/' element={<Login />} />                    
-                </Routes>
-          
-        </BrowserRouter>
-  
+    <Routes>
+        <Route path='/' element={<Login />} />                    
+    </Routes>
   )
 }
 
