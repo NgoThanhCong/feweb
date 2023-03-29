@@ -28,8 +28,6 @@ function Login() {
                                 required/>
                             <button className="login-form-button">Log In</button>
 
-                            <Button>Phong</Button>
-
                             <div className="login-form-help">
                                 <div className="login-form-rememberMe">
                                     <input type="checkbox" className="remberMe-cbx" id="checkbox_id"/>
@@ -42,7 +40,7 @@ function Login() {
                         <div className="login-form-other">
                             <div className="login-form-signupnow" style={{fontSize: '90'}}>
                                 Don't have an account?
-                                <a href="signup.html" className="login-form-signupnow-link">Sign up now!</a>
+                                <a href={`CreateAccount`} className="login-form-signupnow-link">Sign up now!</a>
                             </div>
                         </div>
                     </div>
