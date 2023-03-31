@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, NavDropdown, Nav } from "react-bootstrap";
 import logo from "../images/c57.gif"
 
-function qamCat() {
+function Cat() {
     const handleSubmit = event => {
         event.preventDefault(); // Prevent page refresh
     };
@@ -29,7 +29,7 @@ function qamCat() {
                     <Nav.Link>Category</Nav.Link>
                     <Nav.Link href="#Dashboard">Dashboard</Nav.Link>
                 </Nav>
-                <Nav.Link href={`Login`}>Logout</Nav.Link>
+                <Nav.Link href={`Login`} className="btn btn-danger">Logout</Nav.Link>
             </div>
         </Navbar>
             <div className="container text-center">
@@ -120,4 +120,4 @@ function qamCat() {
     )
 }
 
-export default qamCat;
+export default Cat;

@@ -5,14 +5,11 @@ import Login from './page/admin/Login'
 import './css/style.css'
 import './css/style2.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CreateAccount from './page/admin/CreateAccount';
 
 function App() {
   return (      
     <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='/Login' element={<Login />} />        
-        <Route path='/CreateAccount' element={<CreateAccount />} />        
+        <Route path='/' element={<Login />} />     
     </Routes>
   )
 }
