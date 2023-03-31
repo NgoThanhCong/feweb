@@ -36,13 +36,6 @@ function Login() {
                                 <a className="help-link" href="/">Forgot your password?</a>
                             </div>
                         </div>
-
-                        <div className="login-form-other">
-                            <div className="login-form-signupnow" style={{fontSize: '90'}}>
-                                Don't have an account?
-                                <a href={`CreateAccount`} className="login-form-signupnow-link">Sign up now!</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div className="login-overlay">
