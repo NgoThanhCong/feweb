@@ -1,14 +1,19 @@
 import React from "react";
-import { NavDropdown } from "react-bootstrap";
+import { Navbar, NavDropdown, Nav } from "react-bootstrap";
+import logo from "../images/c57.gif"
 
-function Cat() {
+const handleSubmit = event => {
+    event.preventDefault(); // Prevent page refresh
+};
+
+function qamCat() {
     return (
         <>
-            <nav className="navbar navbar-dark bg-primary navbar-expand-lg">
-                <div className="container-fluid">
-                <a className="navbar-brand" href="#">
-                    <img src="src/images/c57.gif" alt="" width={50} height={50} />
-                </a>
+        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+            <div className="container-fluid">
+                <Navbar.Brand>
+                    <img src={logo} alt="" style={{height:50, width:50}} />
+                </Navbar.Brand>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -20,30 +25,14 @@ function Cat() {
                 >
                     <span className="navbar-toggler-icon" />
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
-                        <a className="nav-link" href="qam_ideals.html">
-                        View Ideals
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link active" aria-current="page">
-                        Category
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="dashboard.html">
-                        Dashboard
-                        </a>
-                    </li>
-                    </ul>
-                    <a href="login.html" className="btn btn-danger me-2">
-                    <i className="fa-solid fa-right-to-bracket" /> Log out
-                    </a>
-                </div>
-                </div>
-            </nav>
+                <Nav className="me-auto">
+                    <Nav.Link href="#Ideals">View Ideals</Nav.Link>
+                    <Nav.Link>Category</Nav.Link>
+                    <Nav.Link href="#Dashboard">Dashboard</Nav.Link>
+                </Nav>
+                <Nav.Link href={`Login`}>Logout</Nav.Link>
+            </div>
+        </Navbar>
             <div className="container text-center">
                 <h2>Category</h2>
                 <div className="row justify-content-md-center">
@@ -56,7 +45,7 @@ function Cat() {
                     data-bs-auto-close="outside"
                     >
                     <NavDropdown title="Add New" id="basic-nav-dropdown">
-                        <form action="">
+                        <form action="" onSubmit={handleSubmit}>
                             New Category
                             <input
                                 type="text"
@@ -80,7 +69,7 @@ function Cat() {
                     data-bs-auto-close="outside"
                     >
                         <NavDropdown title="Make change" id="basic-nav-dropdown">
-                            <form action="">
+                            <form action="" onSubmit={handleSubmit}>
                                 Category
                                 <input
                                     type="text"
@@ -111,19 +100,19 @@ function Cat() {
                     data-bs-auto-close="outside"
                     >
                         <NavDropdown title="Delete" id="basic-nav-dropdown">
-                                <form action="">
-                                    Category
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="addCategory"
-                                        placeholder="Category"
-                                    />
-                                    <button type="submit" className="btn btn-danger">
-                                        Delete
-                                    </button>
-                                </form>
-                            </NavDropdown>
+                            <form action="" onSubmit={handleSubmit}>
+                                Category
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="addCategory"
+                                    placeholder="Category"
+                                />
+                                <button type="submit" className="btn btn-danger">
+                                    Delete
+                                </button>
+                            </form>
+                        </NavDropdown>
                     </button>
                 </div>
                 </div>
@@ -132,4 +121,4 @@ function Cat() {
     )
 }
 
-export default Cat;
+export default qamCat;
