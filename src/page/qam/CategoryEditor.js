@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, NavDropdown, Nav } from "react-bootstrap";
 import logo from "../images/c57.gif"
+import { Link } from "react-router-dom";
 
 function Cat() {
     const handleSubmit = event => {
@@ -25,7 +26,7 @@ function Cat() {
                     <span className="navbar-toggler-icon" />
                 </button>
                 <Nav className="me-auto">
-                    <Nav.Link href="#Ideals">View Ideals</Nav.Link>
+                    <Nav.Link as={Link} to={`/`}>View Ideas</Nav.Link>
                     <Nav.Link>Category</Nav.Link>
                     <Nav.Link href="#Dashboard">Dashboard</Nav.Link>
                 </Nav>
