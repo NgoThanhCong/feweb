@@ -4,9 +4,23 @@ import logo from "../images/c57.gif"
 import { Link } from "react-router-dom";
 
 function Ideas() {
-    const handleSubmit = event => {
-        event.preventDefault(); // Prevent page refresh
-    };
+    const downloadTxtFile = () => {
+        // text content
+        const texts = ["line 1", "line 2", "line 3"]
+    
+       // file object
+        const file = new Blob(texts, {type: 'text/plain'});
+    
+       // anchor link
+        const element = document.createElement("a");
+        element.href = URL.createObjectURL(file);
+        element.download = "100ideas-" + Date.now() + ".txt";
+    
+        // simulate link click
+        document.body.appendChild(element); // Required for this to work in FireFox
+        element.click();
+    }
+    
     return (
         <>
         <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
@@ -33,6 +47,10 @@ function Ideas() {
                 <Nav.Link href={`Login`} className="btn btn-danger">Logout</Nav.Link>
             </div>
         </Navbar>
+        <div className="btnDiv">
+            <button id="downloadBtn" className="btn btn-info" value="download" onClick={downloadTxtFile}>Download</button>
+        </div>
+
         </>
     )
 }
