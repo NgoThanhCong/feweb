@@ -2,9 +2,12 @@ import { Button, ButtonGroup } from "@mui/material";
 import React from "react";
 
 function Login() {
+    const handleSubmit = event => {
+        event.preventDefault(); // Prevent page refresh
+    };
     return (
         <>
-        <form>
+        <form onSubmit={handleSubmit}>
         <div className="container">
             <div className="login-container">
 

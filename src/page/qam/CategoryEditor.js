@@ -2,11 +2,10 @@ import React from "react";
 import { Navbar, NavDropdown, Nav } from "react-bootstrap";
 import logo from "../images/c57.gif"
 
-const handleSubmit = event => {
-    event.preventDefault(); // Prevent page refresh
-};
-
 function qamCat() {
+    const handleSubmit = event => {
+        event.preventDefault(); // Prevent page refresh
+    };
     return (
         <>
         <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
