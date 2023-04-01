@@ -6,7 +6,7 @@ import "./css/style.css";
 import "./css/style2.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CreateAccount from "./page/admin/CreateAccount";
-import Ideas from "./page/qam/ViewIdeas";
+import Ideas from "./page/qam/ViewIdea";
 import Cat from "./page/qam/CategoryEditor";
 import UserList from "./page/admin/UserList";
 import ViewIdea from "./page/admin/ViewIdea";
