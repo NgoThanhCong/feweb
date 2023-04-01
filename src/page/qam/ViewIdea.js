@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import logo from "../images/c57.gif"
 import { Link } from "react-router-dom";
+import { BsArrowBarDown } from "react-icons/bs";
 
 function Ideas() {
     const downloadTxtFile = () => {
@@ -47,9 +48,6 @@ function Ideas() {
                     <Nav.Link href={`Login`} className="btn btn-danger">Logout</Nav.Link>
                 </div>
             </Navbar>
-            <div className="btnDiv">
-                <button id="downloadBtn" className="btn btn-info" value="download" onClick={downloadTxtFile}>Download</button>
-            </div>
 
             <section className="container">
                 <h1 className="large text-primary">
@@ -96,6 +94,7 @@ function Ideas() {
                             <button type="button" className="btn btn-danger">
                                 <i className="fas fa-times"></i>
                             </button>
+                            <button id="downloadBtn" className="btn btn-info" value="download" onClick={downloadTxtFile}> <BsArrowBarDown/> </button>
                         </div>
                     </div>
                 </div>
