@@ -1,5 +1,14 @@
 import React from "react";
-import { Button, Container, Form, FormControl, Nav, NavLink, Navbar, NavbarBrand } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  Form,
+  FormControl,
+  Nav,
+  NavLink,
+  Navbar,
+  NavbarBrand,
+} from "react-bootstrap";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import Header from "../../Header";
@@ -8,9 +17,12 @@ export default function CreateAccount() {
   return (
     <>
       <body>
-        <Header />
-        <NavBar />
-        
+        <header>
+          <NavBar />
+        </header>
+        <br />
+        <br />
+        <br />
         <div className="container">
           <main role="main" className="pb-3">
             <div className="container col-md-6 text-center mt-3">
@@ -35,7 +47,12 @@ export default function CreateAccount() {
                   <label for="role" className="text text-success">
                     Role
                   </label>
-                  <select for="role" name="role" id="role" className="form-control">
+                  <select
+                    for="role"
+                    name="role"
+                    id="role"
+                    className="form-control"
+                  >
                     <option>Select one</option>
                     <option value="staff">Staff</option>
                     <option value="admin">Admin</option>
@@ -48,32 +65,48 @@ export default function CreateAccount() {
                     Department
                   </label>
                   <input for="" className="form-control" />
-                  <span asp-validation-for="" className="text text-danger"></span>
+                  <span
+                    asp-validation-for=""
+                    className="text text-danger"
+                  ></span>
                 </div>
                 <div className="form-group">
                   <label for="username" className="text text-success">
                     Username
                   </label>
                   <input type="text" className="form-control" />
-                  <span asp-validation-for="" className="text text-danger"></span>
+                  <span
+                    asp-validation-for=""
+                    className="text text-danger"
+                  ></span>
                 </div>
                 <div className="form-group">
                   <label for="pwd" className="text text-success">
                     Password
                   </label>
                   <input type="password" className="form-control" />
-                  <span asp-validation-for="" className="text text-danger"></span>
+                  <span
+                    asp-validation-for=""
+                    className="text text-danger"
+                  ></span>
                 </div>
                 <div className="form-group">
                   <label for="Date" className="text text-success">
                     Email
                   </label>
                   <input type="email" className="form-control" />
-                  <span asp-validation-for="" className="text text-danger"></span>
+                  <span
+                    asp-validation-for=""
+                    className="text text-danger"
+                  ></span>
                 </div>
                 <br />
                 <div className="form-group">
-                  <input type="submit" className="btn btn-primary" value="Add" />
+                  <input
+                    type="submit"
+                    className="btn btn-primary"
+                    value="Add"
+                  />
                 </div>
               </form>
             </div>
