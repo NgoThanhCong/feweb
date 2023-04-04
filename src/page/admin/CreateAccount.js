@@ -1,82 +1,16 @@
 import React from "react";
-
+import { Button, Container, Form, FormControl, Nav, NavLink, Navbar, NavbarBrand } from "react-bootstrap";
+import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
+import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
+import Header from "../../Header";
+import NavBar from "../../NavBar";
 export default function CreateAccount() {
   return (
     <>
       <body>
-        <header>
-          <nav className="navbar navbar-expand-lg navbar-light bg-primary">
-            <div className="container-fluid">
-              <a className="navbar-brand" href="#">
-                FPT Greenwich
-              </a>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <div style={{ paddingLeft: "30px" }}></div>
-                  <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#">
-                      Home
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="ViewIdea.html">
-                      Create event
-                    </a>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Dropdown
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="CreateAccount.html">
-                      Create Account
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="User.html">
-                      User
-                    </a>
-                  </li>
-                </ul>
-                <form className="d-flex" role="search">
-                  <input
-                    className="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                  <button className="btn btn-outline-light" type="submit">
-                    Search
-                  </button>
-                </form>
-                <li className="nav nav-item">
-                  <a href="login.html" title="Logout">
-                    <i className="fas fa-sign-out-alt"></i>
-                    <span className="hide-sm">Logout</span>
-                  </a>
-                </li>
-              </div>
-            </div>
-          </nav>
-        </header>
+        <Header />
+        <NavBar />
+        
         <div className="container">
           <main role="main" className="pb-3">
             <div className="container col-md-6 text-center mt-3">
