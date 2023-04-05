@@ -6,10 +6,11 @@ import "./css/style.css";
 import "./css/style2.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CreateAccount from "./page/admin/CreateAccount";
-import Ideas from "./page/qam/ViewIdea";
+import QamIdeas from "./page/qam/ViewIdea";
 import Cat from "./page/qam/CategoryEditor";
 import UserList from "./page/admin/UserList";
 import ViewIdea from "./page/admin/ViewIdea";
+import QacIdeas from "./page/qac/ViewIdea";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Route path="/CreateAccount" element={<CreateAccount />} />
       <Route path="/UserList" element={<UserList />} />
       <Route path="/ViewIdea" element={<ViewIdea />} />
-      <Route path="/" element={<Ideas />} />
+      <Route path="/" element={<QamIdeas />} />
       <Route path="/CatEditor" element={<Cat />} />   
     </Routes>
   );
