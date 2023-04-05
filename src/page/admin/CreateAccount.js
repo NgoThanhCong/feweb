@@ -66,7 +66,7 @@ export default function CreateAccount() {
                   <Col md>
                     <FloatingLabel
                       controlId="floatingSelectGrid"
-                      label="Roles"
+                      label="Role"
                       className="text text-success"
                     >
                       <Form.Select
