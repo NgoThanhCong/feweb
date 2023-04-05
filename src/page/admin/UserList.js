@@ -51,7 +51,7 @@ export default function UserList() {
                         <td>
                           <Button
                             href="#"
-                            variant="outline-warning"
+                            variant="outline-success"
                             onClick={() => setEdit(true)}
                           >
                             Edit
