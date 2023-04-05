@@ -14,7 +14,7 @@ export default function NavBar() {
     <>
       <Navbar bg="primary" variant="dark">
         <Container fluid>
-          <NavbarBrand href="#home">FPT Greenwich</NavbarBrand>
+          <NavbarBrand as={Link} to={`/Login`}>FPT Greenwich</NavbarBrand>
           <NavbarToggle aria-controls="navbarScroll" />
             <Nav
               className="me-auto my-2 my-lg-0"
@@ -22,9 +22,9 @@ export default function NavBar() {
               navbarScroll
             >
               <NavLink as={Link} to={`/Login`} active>Home</NavLink>
-              <NavLink href="#ViewIdea" active>Event</NavLink>
-              <NavLink href="#UserList" active>User Manager</NavLink>
-              <NavLink href="#CreateAccount" active>CreateAccount</NavLink>
+              <NavLink as={Link} to={`/ViewIdea`} active>Event</NavLink>
+              <NavLink as={Link} to={`/UserList`} active>User Manager</NavLink>
+              <NavLink as={Link} to={`/CreateAccount`} active>CreateAccount</NavLink>
             </Nav>
             <Form className="d-flex">
               <FormControl
