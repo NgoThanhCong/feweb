@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../Header";
 import NavBar from "../../NavBar";
 import { Button, Col, FloatingLabel, Form, Row } from "react-bootstrap";
 export default function CreateAccount() {
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  };
+
   return (
     <>
       <body>
@@ -15,7 +27,7 @@ export default function CreateAccount() {
         <div className="container">
           <main role="main" className="pb-3">
             <div className="container col-md-6 text-center mt-3">
-              <Form
+              <Form noValidate validated={validated} onSubmit={handleSubmit}
                 className="card p-3 bg-light"
                 asp-controller="Book"
                 asp-action="Add"
