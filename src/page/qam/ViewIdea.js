@@ -4,7 +4,7 @@ import logo from "../images/c57.gif"
 import { Link } from "react-router-dom";
 import { BsArrowBarDown } from "react-icons/bs";
 
-function Ideas() {
+function QamIdeas() {
     const downloadTxtFile = () => {
         // text content
         const texts = ["line 1", "line 2", "line 3"]
@@ -103,4 +103,4 @@ function Ideas() {
     )
 }
 
-export default Ideas;
+export default QamIdeas;
