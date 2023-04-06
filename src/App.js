@@ -24,7 +24,6 @@ function App() {
       <Route path="/UserList" element={<UserList />} />
       <Route path="/ViewIdea" element={<ViewIdea />} />
       <Route path="/" element={<QamIdeas />} />
-      <Route path="/qamIdea" element={<Ideas />} />
       <Route path="/CatEditor" element={<Cat />} />   
     </Routes>
   );
