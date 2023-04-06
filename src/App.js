@@ -23,7 +23,7 @@ function App() {
       <Route path="/CreateAccount" element={<CreateAccount />} />
       <Route path="/UserList" element={<UserList />} />
       <Route path="/ViewIdea" element={<ViewIdea />} />
-      <Route path="/" element={<QamIdeas />} />
+      <Route path="/QamIdeas" element={<QamIdeas />} />
       <Route path="/CatEditor" element={<Cat />} />   
     </Routes>
   );
