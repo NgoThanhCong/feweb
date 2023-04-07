@@ -51,7 +51,7 @@ function QamIdeas() {
                         <h3>Say Something...</h3>
                     </div>
                     <form className="form my-1">
-                        <textarea name="text" cols="30" rows="5" placeholder="Create a post" required></textarea>
+                        <textarea name="text" cols="30" rows="5" placeholder="Create a post" required style={{display:"flex"}}></textarea>
                         <input type="submit" className="btn btn-dark my-1" value="Submit" />
                     </form>
                 </div>
@@ -60,7 +60,7 @@ function QamIdeas() {
                     <div className="post bg-white p-1 my-1">
                         <div>
                             <a href="profile.html">
-                                <img className="round-img"
+                                <img className="round-img" style={{height:50, width:50}}
                                     src="https://i.pinimg.com/280x280_RS/2e/45/66/2e4566fd829bcf9eb11ccdb5f252b02f.jpg"
                                     alt="" />
                                 <h4>Thai Son</h4>
@@ -76,7 +76,7 @@ function QamIdeas() {
                             </p>
                             <button type="button" className="btn btn-light">
                                 <i><BsHandThumbsUp/></i>
-                                <span >1</span>
+                                <span>1</span>
                             </button>
                             <button type="button" className="btn btn-light">
                                 <i><BsHandThumbsDown/></i>

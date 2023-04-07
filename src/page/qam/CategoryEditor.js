@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, NavDropdown, Nav } from "react-bootstrap";
 import logo from "../images/c57.gif"
 import { Link } from "react-router-dom";
+import {BsBoxArrowInRight} from "react-icons/bs";
 
 function Cat() {
     const handleSubmit = event => {
@@ -14,23 +15,14 @@ function Cat() {
                 <Navbar.Brand>
                     <img src={logo} alt="" style={{height:50, width:50}} />
                 </Navbar.Brand>
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon" />
-                </button>
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to={`/`}>View Ideas</Nav.Link>
                     <Nav.Link>Category</Nav.Link>
                     <Nav.Link href="#Dashboard">Dashboard</Nav.Link>
                 </Nav>
-                <Nav.Link href={`Login`} className="btn btn-danger">Logout</Nav.Link>
+                <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100}} className="btn btn-danger">
+                    <BsBoxArrowInRight/> <a style={{ marginLeft: '.5rem' }}>Logout</a> 
+                </Nav.Link>
             </div>
         </Navbar>
             <div className="container text-center">

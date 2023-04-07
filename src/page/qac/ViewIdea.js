@@ -41,7 +41,7 @@ function QacIdeas() {
                     <div className="post bg-white p-1 my-1">
                         <div>
                             <a href="profile.html">
-                                <img className="round-img"
+                                <img className="round-img" style={{height:50, width:50}}
                                     src="https://i.pinimg.com/280x280_RS/2e/45/66/2e4566fd829bcf9eb11ccdb5f252b02f.jpg"
                                     alt="" />
                                 <h4>Thai Son</h4>
