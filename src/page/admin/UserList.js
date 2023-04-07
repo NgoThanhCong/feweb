@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "../../NavBar";
 import { Button, Form, Modal, Table } from "react-bootstrap";
-import { colors } from "@mui/material";
 
 export default function UserList() {
   const [show, setShow] = useState(false);
@@ -93,9 +92,8 @@ export default function UserList() {
                                   <Form.Select defaultValue="Select one">
                                     <option>Select one</option>
                                     <option value="1">Staff</option>
-                                    <option value="2">Admin</option>
-                                    <option value="3">QAC</option>
-                                    <option value="4">QAM</option>
+                                    <option value="2">QAC</option>
+                                    <option value="3">QAM</option>
                                   </Form.Select>
                                 </Form.Group>
                                 <Form.Group

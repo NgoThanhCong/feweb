@@ -75,9 +75,8 @@ export default function CreateAccount() {
                       >
                         <option>Select one</option>
                         <option value="1">Staff</option>
-                        <option value="2">Admin</option>
-                        <option value="3">QAC</option>
-                        <option value="4">QAM</option>
+                        <option value="2">QAC</option>
+                        <option value="3">QAM</option>
                       </Form.Select>
                     </FloatingLabel>
                   </Col>
