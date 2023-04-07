@@ -12,6 +12,7 @@ import UserList from "./page/admin/UserList";
 import ViewIdea from "./page/admin/ViewIdea";
 import Login from "./Login";
 import NavBar from "./NavBar";
+import QacIdeas from "./page/qac/ViewIdea";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       <Route path="/UserList" element={<UserList />} />
       <Route path="/ViewIdea" element={<ViewIdea />} />
       <Route path="/QamIdeas" element={<QamIdeas />} />
-      <Route path="/CatEditor" element={<Cat />} />   
+      <Route path="/CatEditor" element={<Cat />} />
+      <Route path="/QacIdeas" element={<QacIdeas />} />
     </Routes>
   );
 }

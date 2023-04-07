@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import logo from "../images/c57.gif"
 import { Link } from "react-router-dom";
+import {BsBoxArrowInRight, BsHandThumbsUp, BsHandThumbsDown} from "react-icons/bs";
 
 function QacIdeas() {
     return (
@@ -11,21 +12,12 @@ function QacIdeas() {
                     <Navbar.Brand>
                         <img src={logo} alt="" style={{height:50, width:50}} />
                     </Navbar.Brand>
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon" />
-                    </button>
                     <Nav className="me-auto">
                         <Nav.Link>View Ideas</Nav.Link>
                     </Nav>
-                    <Nav.Link href={`Login`} className="btn btn-danger">Logout</Nav.Link>
+                    <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100}} className="btn btn-danger"> 
+                        <BsBoxArrowInRight/> Logout
+                    </Nav.Link>
                 </div>
             </Navbar>
 
@@ -64,15 +56,12 @@ function QacIdeas() {
                                 Posted on 10/03/2023
                             </p>
                             <button type="button" className="btn btn-light">
-                                <i className="fas fa-thumbs-up"></i>
+                                <i><BsHandThumbsUp/></i>
                                 <span>1</span>
                             </button>
                             <button type="button" className="btn btn-light">
-                                <i className="fas fa-thumbs-down"></i>
+                                <i><BsHandThumbsDown/></i>
                                 <span>1</span>
-                            </button>
-                            <button type="button" className="btn btn-danger">
-                                <i className="fas fa-times"></i>
                             </button>
                         </div>
                     </div>
