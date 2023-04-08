@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../images/c57.gif"
 import { Link } from "react-router-dom";
 import { BsDownload, BsHandThumbsUp, BsHandThumbsDown, BsBoxArrowInRight } from "react-icons/bs";
@@ -25,19 +25,19 @@ function QamIdeas() {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-                <div className="container-fluid">
+                <Container fluid>
                     <Navbar.Brand>
                         <img src={logo} alt="" style={{height:50, width:50}} />
                     </Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link>View Ideas</Nav.Link>
+                        <Nav.Link active>View Ideas</Nav.Link>
                         <Nav.Link as={Link} to={`/CatEditor`}>Category</Nav.Link>
-                        <Nav.Link href="#Dashboard">Dashboard</Nav.Link>
+                        <Nav.Link as={Link} to={`/Dashboard`}>Dashboard</Nav.Link>
                     </Nav>
-                    <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100}} className="btn btn-danger">
+                    <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100, color:"white"}} className="btn btn-danger">
                         <BsBoxArrowInRight/> <a style={{ marginLeft: '.5rem' }}>Logout</a> 
                     </Nav.Link>
-                </div>
+                </Container>
             </Navbar>
 
             <section className="container">
@@ -51,7 +51,7 @@ function QamIdeas() {
                         <h3>Say Something...</h3>
                     </div>
                     <form className="form my-1">
-                        <textarea name="text" cols="30" rows="5" placeholder="Create a post" required style={{display:"flex"}}></textarea>
+                        <textarea name="text" cols="30" rows="5" placeholder="Create a post" required style={{display:"flex", outline:"solid", width:"100%"}}></textarea>
                         <input type="submit" className="btn btn-dark my-1" value="Submit" />
                     </form>
                 </div>

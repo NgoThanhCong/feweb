@@ -12,6 +12,7 @@ import Login from "./Login";
 import NavBar from "./NavBar";
 import QacIdeas from "./page/qac/ViewIdea";
 import SetDate from "./page/admin/SetDate";
+import Dashboard from "./page/qam/Dashboard";
 
 function App() {
   return (
@@ -20,13 +21,13 @@ function App() {
       <Route path="/Header" element={<Header />} />
       <Route path="/NavBar" element={<NavBar />} />
       <Route path="/SetDate" element={<SetDate />} />
-      <Route path="/Login" element={<Login />} />
       <Route path="/CreateAccount" element={<CreateAccount />} />
       <Route path="/UserList" element={<UserList />} />
       <Route path="/ViewIdea" element={<ViewIdea />} />
       <Route path="/QamIdeas" element={<QamIdeas />} />
       <Route path="/CatEditor" element={<Cat />} />
       <Route path="/QacIdeas" element={<QacIdeas />} />
+      <Route path="/Dashboard" element={<Dashboard />} />
     </Routes>
   );
 }
