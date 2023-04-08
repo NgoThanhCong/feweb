@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-// import "./style.css";
-// import "./css/style2.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Header";
 import CreateAccount from "./page/admin/CreateAccount";
@@ -13,13 +11,15 @@ import ViewIdea from "./page/admin/ViewIdea";
 import Login from "./Login";
 import NavBar from "./NavBar";
 import QacIdeas from "./page/qac/ViewIdea";
+import SetDate from "./page/admin/SetDate";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/Header" element={<Header />} />
-      <Route path="/NavBar" element={<NavBar />} />  
+      <Route path="/NavBar" element={<NavBar />} />
+      <Route path="/SetDate" element={<SetDate />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/CreateAccount" element={<CreateAccount />} />
       <Route path="/UserList" element={<UserList />} />
