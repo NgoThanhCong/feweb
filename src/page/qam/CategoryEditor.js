@@ -49,7 +49,7 @@ function Cat() {
                     
                     <div className="col-md-auto">
                         <DropdownButton title="Change Category Name" id="dropdown-basic-button" variant="warning">
-                            <form action="" onSubmit={handleSubmit} >
+                            <form action="" onSubmit={handleSubmit}>
                                 <Dropdown.ItemText>
                                     Category
                                 </Dropdown.ItemText>

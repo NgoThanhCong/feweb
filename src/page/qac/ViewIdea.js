@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../images/c57.gif"
-import { Link } from "react-router-dom";
 import {BsBoxArrowInRight, BsHandThumbsUp, BsHandThumbsDown} from "react-icons/bs";
 
 function QacIdeas() {
