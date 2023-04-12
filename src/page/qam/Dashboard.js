@@ -13,7 +13,7 @@ function Dashboard() {
                         <img src={logo} alt="" style={{height:50, width:50}} />
                     </Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to={`/`}>View Ideas</Nav.Link>
+                        <Nav.Link as={Link} to={`/QamIdeas`}>View Ideas</Nav.Link>
                         <Nav.Link as={Link} to={`/CatEditor`}>Category</Nav.Link>
                         <Nav.Link active>Dashboard</Nav.Link>
                     </Nav>

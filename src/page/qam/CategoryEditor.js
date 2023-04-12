@@ -16,7 +16,7 @@ function Cat() {
                     <img src={logo} alt="" style={{height:50, width:50}} />
                 </Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link as={Link} to={`/`}>View Ideas</Nav.Link>
+                    <Nav.Link as={Link} to={`/QamIdeas`}>View Ideas</Nav.Link>
                     <Nav.Link active>Category</Nav.Link>
                     <Nav.Link as={Link} to={`/Dashboard`}>Dashboard</Nav.Link>
                 </Nav>
