@@ -1,25 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../images/c57.gif"
 import { Link } from "react-router-dom";
 import { BsDownload, BsHandThumbsUp, BsHandThumbsDown, BsBoxArrowInRight } from "react-icons/bs";
 
 function QamIdeas() {
-    const downloadTxtFile = () => {
-        // text content
-        const texts = ["line 1", "line 2", "line 3"]
-    
-       // file object
-        const file = new Blob(texts, {type: 'text/plain'});
-    
-       // anchor link
-        const element = document.createElement("a");
-        element.href = URL.createObjectURL(file);
-        element.download = "100ideas-" + Date.now() + ".txt";
-    
-        // simulate link click
-        document.body.appendChild(element); // Required for this to work in FireFox
-        element.click();
+    //Change like color on click
+    const [likeActive, setLikeActive] = useState(false);
+    const [dislikeActive, setDislikeActive] = useState(false);
+    const [activeBtn, setActiveBtn] = useState("none");
+
+    const likeClick = () => {
+        setLikeActive(!likeActive);
+    }
+    const dislikeClick = () => {
+        setDislikeActive(!dislikeActive);
     }
     
     return (
@@ -74,15 +69,19 @@ function QamIdeas() {
                             <p className="post-date">
                                 Posted on 10/03/2023
                             </p>
-                            <button type="button" className="btn btn-light">
+                            <button onClick={likeClick} type="button" className="btn btn-light"
+                                    style={{ backgroundColor: likeActive ? "aqua" : "white" }}
+                            >
                                 <i><BsHandThumbsUp/></i>
                                 <span>1</span>
                             </button>
-                            <button type="button" className="btn btn-light">
+                            <button onClick={dislikeClick} type="button" className="btn btn-light"
+                                    style={{ backgroundColor: dislikeActive ? "crimson" : "white" }}
+                            >
                                 <i><BsHandThumbsDown/></i>
                                 <span>1</span>
                             </button>
-                            <button id="downloadBtn" className="btn btn-info" value="download" onClick={downloadTxtFile} style={{alignItems: "center", display:"flex", justifyContent: "center"}}> 
+                            <button id="downloadBtn" className="btn btn-info" value="download" style={{alignItems: "center", display:"flex", justifyContent: "center"}}> 
                                 <BsDownload/> <a style={{ marginLeft: '.5rem' }}>Download</a> 
                             </button>
                         </div>
