@@ -187,7 +187,7 @@ export default function UserList() {
                             </Modal.Body>
                             <Modal.Footer>
                               <Button variant="secondary" onClick={handleClose}>
-                                Cancer
+                                Cancel
                               </Button>
                               <Button variant="primary">OK</Button>
                             </Modal.Footer>

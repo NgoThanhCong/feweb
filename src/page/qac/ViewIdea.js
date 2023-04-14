@@ -1,7 +1,7 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Form, Button } from "react-bootstrap";
 import logo from "../images/c57.gif"
-import {BsBoxArrowInRight, BsHandThumbsUp, BsHandThumbsDown} from "react-icons/bs";
+import {BsBoxArrowInRight, BsHandThumbsUp, BsHandThumbsDown, BsSearch} from "react-icons/bs";
 
 function QacIdeas() {
     return (
@@ -15,6 +15,12 @@ function QacIdeas() {
                         <Nav.Link active>View Ideas</Nav.Link>
                         <Nav.Link href="https://www.google.com/gmail/about/">Gmail</Nav.Link>
                     </Nav>
+                    <Form className="d-flex">
+                        <Form.Control type="search" placeholder="Search" className="me-1" aria-label="Search"/>
+                        <Button variant="dark" className="me-5">
+                            <BsSearch/>
+                        </Button>
+                    </Form>
                     <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100, color:"white"}} className="btn btn-danger"> 
                         <BsBoxArrowInRight/> <a style={{ marginLeft: '.5rem' }}>Logout</a>
                     </Nav.Link>
