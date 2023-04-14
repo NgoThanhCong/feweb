@@ -101,7 +101,7 @@ const btn = {
     outline: 'none'
 }
 
-export default function AdminIdea() {
+export default function StaffIdea() {
   return (
     <>
       <body style={body}>

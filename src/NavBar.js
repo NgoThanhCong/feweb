@@ -9,20 +9,33 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 
+const styles = {
+  avatar: {
+    margin: "auto",
+    width: "120px",
+    borderRadius: "50%",
+    objectFit: "cover",
+    marginBottom: "0",
+  }
+}
+
 export default function NavBar() {
   return (
     <>
-      <Navbar bg="primary" variant="dark">
+      <Navbar bg="primary" variant="dark" className="p-2">
         <Container fluid>
-          <NavbarBrand as={Link} to={`/Login`}>FPT Greenwich</NavbarBrand>
+          <NavbarBrand as={Link} to={`/Login`}>
+            <img style={styles.avatar} src="https://fpt.edu.vn/Content/images/assets/2022-Greenwich-Eng.jpg" alt="FPT Greenwich"></img>
+          </NavbarBrand>
+          
           <NavbarToggle aria-controls="navbarScroll" />
             <Nav
               className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
+              style={{ maxHeight: "100px" , fontSize: "18px" }}
               navbarScroll
             >
-              <NavLink as={Link} to={`/Login`} active>Home</NavLink>
-              <NavLink as={Link} to={`/ViewIdea`} active>Event</NavLink>
+              <NavLink as={Link} to={`/AdminHome`} active>Home</NavLink>
+              <NavLink as={Link} to={`/AdminIdea`} active>Event</NavLink>
               <NavLink as={Link} to={`/UserList`} active>User Manager</NavLink>
               <NavLink as={Link} to={`/CreateAccount`} active>CreateAccount</NavLink>
             </Nav>

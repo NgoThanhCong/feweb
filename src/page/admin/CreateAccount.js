@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../../Header";
 import NavBar from "../../NavBar";
 import { Button, Col, FloatingLabel, Form, Row } from "react-bootstrap";
+
 export default function CreateAccount() {
   const [validated, setValidated] = useState(false);
 
@@ -21,19 +22,17 @@ export default function CreateAccount() {
         <header>
           <NavBar />
         </header>
-        <br />
-        <br />
-        <br />
         <div className="container">
-          <main role="main" className="pb-3">
+          <main role="main" className="pb-3 pt-4">
             <div className="container col-md-6 text-center mt-3">
-              <Form noValidate validated={validated} onSubmit={handleSubmit}
+              <Form
+                noValidate
+                validated={validated}
+                onSubmit={handleSubmit}
                 className="card p-3 bg-light"
-                asp-controller="Book"
-                asp-action="Add"
                 method="post"
               >
-                <h3 className="text text-primary">Creater Account</h3>
+                <h3 className="mb-3 text text-primary">Creater Account</h3>
                 <FloatingLabel
                   controlId="floatingInputGrid"
                   label="Name"
@@ -46,6 +45,9 @@ export default function CreateAccount() {
                     placeholder="Name"
                     required
                   />
+                  <Form.Control.Feedback type="invalid">
+                    Please provide a valid name.
+                  </Form.Control.Feedback>
                 </FloatingLabel>
                 <Row className="g-2">
                   <Col md>
@@ -93,6 +95,9 @@ export default function CreateAccount() {
                     placeholder="Username"
                     required
                   />
+                  <Form.Control.Feedback type="invalid">
+                    Username is a required field.
+                  </Form.Control.Feedback>
                 </FloatingLabel>
                 <FloatingLabel
                   controlId="floatingInput"
@@ -106,6 +111,9 @@ export default function CreateAccount() {
                     placeholder="name@gmail.com"
                     required
                   />
+                  <Form.Control.Feedback type="invalid">
+                    Email is a required field.
+                  </Form.Control.Feedback>
                 </FloatingLabel>
                 <FloatingLabel
                   controlId="floatingPassword"
@@ -120,20 +128,43 @@ export default function CreateAccount() {
                     aria-describedby="passwordHelpBlock"
                     required
                   />
+                  <Form.Control.Feedback type="invalid">
+                    Your password must be 8-20 characters long, contain letters
+                    and numbers, and must not contain spaces, special
+                    characters, or emoji.
+                  </Form.Control.Feedback>
+                </FloatingLabel>
+                
+                <FloatingLabel
+                  controlId="floatingConfirmPassword"
+                  label="ConfirmPassword"
+                  className="text text-success mb-3"
+                  htmlFor="inputConfirmPassword"
+                >
+                  <Form.Control
+                    type="password"
+                    id="inputConfirmPassword"
+                    placeholder="ConfirmPassword"
+                    aria-describedby="passwordHelpBlock"
+                    required
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Your password must be 8-20 characters long, contain letters
+                    and numbers, and must not contain spaces, special
+                    characters, or emoji.
+                  </Form.Control.Feedback>
                   <Form.Text
                     id="passwordHelpBlock"
                     muted
                     style={{ fontSize: "10px" }}
                   >
-                    Your password must be 8-20 characters long, contain letters
-                    and numbers, and must not contain spaces, special
-                    characters, or emoji.
+                    All fields must be filled in.
                   </Form.Text>
                 </FloatingLabel>
-                <Form.Group as={Row} className="mb-3">
+                <Form.Group as={Row} className="mb-2">
                   <Col sm={{ span: 8, offset: 2 }}>
                     <Button variant="primary" type="submit">
-                      Add
+                      Create
                     </Button>
                   </Col>
                 </Form.Group>

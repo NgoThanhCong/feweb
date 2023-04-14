@@ -43,7 +43,7 @@ export default function UserList() {
                         <td>1</td>
                         <td>Nguyen Thai Son</td>
                         <td>Staff</td>
-                        <td>???</td>
+                        <td>IT</td>
                         <td>thaison123</td>
                         <td>123456</td>
                         <td>son123@gmail.com</td>

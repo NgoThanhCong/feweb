@@ -17,6 +17,7 @@ export default function SetDate() {
                 <header>
                     <NavBar />
                 </header>
+                
                 <Container maxWidth="md">
                     <Grid container direction="row" justifyContent="center" alignItems="center">
                         <Grid item xs={6} >
