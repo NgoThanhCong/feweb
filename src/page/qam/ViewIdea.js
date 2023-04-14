@@ -1,25 +1,54 @@
-import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import React, { useState } from "react";
+import { Navbar, Nav, Container, Form, Button } from "react-bootstrap";
 import logo from "../images/c57.gif"
 import { Link } from "react-router-dom";
-import { BsDownload, BsHandThumbsUp, BsHandThumbsDown, BsBoxArrowInRight } from "react-icons/bs";
+import { BsDownload, BsHandThumbsUp, BsHandThumbsDown, BsBoxArrowInRight, BsSearch } from "react-icons/bs";
 
 function QamIdeas() {
-    const downloadTxtFile = () => {
-        // text content
-        const texts = ["line 1", "line 2", "line 3"]
-    
-       // file object
-        const file = new Blob(texts, {type: 'text/plain'});
-    
-       // anchor link
-        const element = document.createElement("a");
-        element.href = URL.createObjectURL(file);
-        element.download = "100ideas-" + Date.now() + ".txt";
-    
-        // simulate link click
-        document.body.appendChild(element); // Required for this to work in FireFox
-        element.click();
+    //Like, Dislike function
+    const [like, setLike] = useState(10);
+    const [dislike, setDislike] = useState(2);
+
+    const [likeActive, setLikeActive] = useState(false);
+    const [dislikeActive, setDislikeActive] = useState(false);
+
+    function likefunc()
+    {
+        if(likeActive)
+        {
+            setLikeActive(false);
+            setLike(like - 1);
+        }
+        else
+        {
+            setLikeActive(true);
+            setLike(like + 1);
+            if(dislikeActive)
+            {
+                setDislikeActive(false);
+                setLike(like + 1);
+                setDislike(dislike - 1);
+            }
+        }
+    }
+    function dislikefunc()
+    {
+        if(dislikeActive)
+        {
+            setDislikeActive(false);
+            setDislike(dislike - 1);
+        }
+        else
+        {
+            setDislikeActive(true);
+            setDislike(dislike + 1);
+            if(likeActive)
+            {
+                setLikeActive(false);
+                setDislike(dislike + 1);
+                setLike(like - 1);
+            }
+        }
     }
     
     return (
@@ -34,7 +63,13 @@ function QamIdeas() {
                         <Nav.Link as={Link} to={`/CatEditor`}>Category</Nav.Link>
                         <Nav.Link as={Link} to={`/Dashboard`}>Dashboard</Nav.Link>
                     </Nav>
-                    <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100, color:"white"}} className="btn btn-danger">
+                    <Form className="d-flex">
+                        <Form.Control type="search" placeholder="Search" className="me-1" aria-label="Search"/>
+                        <Button variant="dark" className="me-5">
+                            <BsSearch/>
+                        </Button>
+                    </Form>
+                    <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100, height:40, color:"white"}} className="btn btn-danger">
                         <BsBoxArrowInRight/> <a style={{ marginLeft: '.5rem' }}>Logout</a> 
                     </Nav.Link>
                 </Container>
@@ -47,7 +82,7 @@ function QamIdeas() {
                 <p className="lead"><i className="fas fa-user"></i> Welcome to the community!</p>
 
                 <div className="post-form">
-                    <div className="bg-primary p">
+                    <div>
                         <h3>Say Something...</h3>
                     </div>
                     <form className="form my-1">
@@ -57,32 +92,30 @@ function QamIdeas() {
                 </div>
 
                 <div className="posts">
-                    <div className="post bg-white p-1 my-1">
+                    <div className="post bg-white p-1 my-1" style={{display:"flex", outline:"2px solid green", width:"100%"}}>
                         <div>
                             <a href="profile.html">
-                                <img className="round-img" style={{height:50, width:50}}
+                                <img className="round-img" style={{height:75, width:75}}
                                     src="https://i.pinimg.com/280x280_RS/2e/45/66/2e4566fd829bcf9eb11ccdb5f252b02f.jpg"
                                     alt="" />
                                 <h4>Thai Son</h4>
                             </a>
                         </div>
 
-                        <div>
+                        <div style={{ marginLeft:10 }}>
                             <p className="my-1">
                                 Xin chao tat ca cac ban!
                             </p>
                             <p className="post-date">
                                 Posted on 10/03/2023
                             </p>
-                            <button type="button" className="btn btn-light">
-                                <i><BsHandThumbsUp/></i>
-                                <span>1</span>
+                            <button onClick={likefunc} type="button" className="btn btn-light"  style={{ backgroundColor: likeActive ? "aqua" : "white" }}>
+                                <BsHandThumbsUp/>{like}
                             </button>
-                            <button type="button" className="btn btn-light">
-                                <i><BsHandThumbsDown/></i>
-                                <span>1</span>
+                            <button onClick={dislikefunc} type="button" className="btn btn-light" style={{ backgroundColor: dislikeActive ? "crimson" : "white" }}>
+                                <BsHandThumbsDown/>{dislike}
                             </button>
-                            <button id="downloadBtn" className="btn btn-info" value="download" onClick={downloadTxtFile} style={{alignItems: "center", display:"flex", justifyContent: "center"}}> 
+                            <button className="btn btn-info" value="download" style={{alignItems: "center", display:"flex", justifyContent: "center"}}> 
                                 <BsDownload/> <a style={{ marginLeft: '.5rem' }}>Download</a> 
                             </button>
                         </div>
