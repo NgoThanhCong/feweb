@@ -109,16 +109,6 @@ export default function AdminIdea() {
         <header>
           <NavBar />
         </header>
-
-        {/* <Container fluid>
-          <div className="my-4">
-            <h4 class="mb-3 d-inline-block align-middle">Popular Idea</h4>
-            <section>
-              <div></div>
-            </section>
-            <h4 class="mr-3 d-inline-block align-middle">Recent Idea</h4>
-          </div>
-        </Container> */}
         <section>
           <Container fluid style={container}>
             <div>

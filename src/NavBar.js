@@ -22,13 +22,14 @@ const styles = {
 export default function NavBar() {
   return (
     <>
-      <Navbar bg="primary" variant="dark" className="p-2">
+      <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" className="p-2">
         <Container fluid>
           <NavbarBrand>
             <img style={styles.avatar} src="https://fpt.edu.vn/Content/images/assets/2022-Greenwich-Eng.jpg" alt="FPT Greenwich"></img>
           </NavbarBrand>
           
-          <NavbarToggle aria-controls="navbarScroll" />
+          <NavbarToggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" , fontSize: "18px" }}
@@ -48,6 +49,7 @@ export default function NavBar() {
               />
               <Button variant="outline-success" active>Search</Button>
             </Form>
+            </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
