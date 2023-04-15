@@ -101,6 +101,7 @@ const btn = {
     outline: 'none'
 }
 
+
 export default function AdminIdea() {
   return (
     <>

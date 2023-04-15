@@ -24,7 +24,7 @@ export default function NavBar() {
     <>
       <Navbar bg="primary" variant="dark" className="p-2">
         <Container fluid>
-          <NavbarBrand as={Link} to={`/Login`}>
+          <NavbarBrand>
             <img style={styles.avatar} src="https://fpt.edu.vn/Content/images/assets/2022-Greenwich-Eng.jpg" alt="FPT Greenwich"></img>
           </NavbarBrand>
           
