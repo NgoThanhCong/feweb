@@ -35,7 +35,7 @@ function Dashboard() {
             </Navbar>
 
             <section className="container">
-                <div class="chartjs-render-monitor" style={{display:"block", width:"726px", height:"363px"}}>
+                <div class="chartjs-render-monitor" style={{display:"block", width:"726px", height:"363px", position:"relative"}}>
                     <Table>
                         <tr>
                             <th>
