@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import { Navbar, Dropdown, Nav, DropdownButton, Container, Table, Button } from "react-bootstrap";
-import logo from "../images/c57.gif"
 import { Link } from "react-router-dom";
 import {BsBoxArrowInRight} from "react-icons/bs";
+
+const styles = {
+    avatar: {
+      margin: "auto",
+      width: "120px",
+      borderRadius: "50%",
+      objectFit: "cover",
+      marginBottom: "0",
+    }
+}
 
 function Cat() {
     const handleSubmit = event => {
@@ -13,7 +22,7 @@ function Cat() {
         <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
             <Container fluid>
                 <Navbar.Brand>
-                    <img src={logo} alt="" style={{height:50, width:50}} />
+                    <img src="https://fpt.edu.vn/Content/images/assets/2022-Greenwich-Eng.jpg" alt="" style={styles.avatar} />
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to={`/QamIdeas`}>View Ideas</Nav.Link>

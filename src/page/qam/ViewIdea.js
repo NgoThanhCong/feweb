@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container, Form, Button } from "react-bootstrap";
-import logo from "../images/c57.gif"
 import { Link } from "react-router-dom";
 import { BsDownload, BsHandThumbsUp, BsHandThumbsDown, BsBoxArrowInRight, BsSearch } from "react-icons/bs";
 
