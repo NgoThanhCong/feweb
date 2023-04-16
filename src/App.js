@@ -14,7 +14,7 @@ import SetDate from "./page/admin/SetDate";
 import Dashboard from "./page/qam/Dashboard";
 import AdminIdea from "./page/admin/ViewIdea";
 import StaffIdea from "./page/staff/ViewIdea";
-import AdminHome from "./page/admin/AdminHome";
+import AdminEvent from "./page/admin/AdminEvent";
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
       <Route path="/CreateAccount" element={<CreateAccount />} />
       <Route path="/UserList" element={<UserList />} />
       <Route path="/AdminIdea" element={<AdminIdea />} />
-      <Route path="/AdminHome" element={< AdminHome/>} />
+      <Route path="/AdminEvent" element={< AdminEvent/>} />
       <Route path="/QamIdeas" element={<QamIdeas />} />
       <Route path="/CatEditor" element={<Cat />} />
       <Route path="/QacIdeas" element={<QacIdeas />} />

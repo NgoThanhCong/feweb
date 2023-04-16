@@ -1,5 +1,13 @@
-import React from "react";
-import { Accordion, Col, Container, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import {
+  Accordion,
+  Button,
+  Col,
+  Container,
+  Form,
+  Modal,
+  Row,
+} from "react-bootstrap";
 import NavBar from "../../NavBar";
 
 const styles = {
@@ -19,7 +27,7 @@ const styles = {
     border: "5px solid #e6e6e6",
     padding: "40px 25px",
     marginBottom: "20px",
-    paddingBottom: "10px"
+    paddingBottom: "10px",
   },
   avatar: {
     margin: "-40px auto 0px",
@@ -47,15 +55,103 @@ const styles = {
     backgroundColor: "#ffffff",
     overflowX: "hidden",
   },
+  accordion: {
+    textAlign: "center",
+    maxWidth: "950px",
+    margin: "0 auto",
+    border: "none",
+    padding: "40px 25px",
+    marginBottom: "20px",
+    paddingBottom: "10px",
+  },
 };
 
-export default function AdminHome() {
+export default function AdminEvent() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <NavBar />
       <Container className="mt-3">
         <section style={styles.section}>
-          <h1 className="text-center">Recent Idea</h1>
+          <h1 className="text-center">Events</h1>
+          <Button style={{fontSize:"20px" , position:"fixed", top: "100px", right: "270px"}} variant="success" onClick={handleShow}>
+            Create Event
+          </Button>
+          <Modal
+            size="auto"
+            show={show}
+            onHide={handleClose}
+            backdrop="static"
+            keyboard={false}
+          >
+            <Modal.Header closeButton>
+              <Modal.Title className="text text-primary">
+                Create Event
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Form>
+                <Form.Group className="mb-3" controlId="Form.ControlRole">
+                  <Form.Label className="text text-primary">Manager</Form.Label>
+                  <Form.Select defaultValue="Select one">
+                    <option>Select one</option>
+                    <option value="1">Staff</option>
+                    <option value="2">QAC</option>
+                    <option value="3">QAM</option>
+                  </Form.Select>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="Form.ControlName">
+                  <Form.Label className="text text-primary">Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Name of event"
+                    autoFocus
+                  />
+                </Form.Group>
+
+                <Form.Group
+                  className="mb-3"
+                  controlId="Form.ControlDescription"
+                >
+                  <Form.Label className="text text-primary">
+                    Description
+                  </Form.Label>
+                  <Form.Control
+                    type="description"
+                    as="textarea"
+                    placeholder="Description of event"
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="Form.ControlFirstDate">
+                  <Form.Label className="text text-primary">
+                    First Closing Date
+                  </Form.Label>
+                  <Form.Control
+                    type="date"
+                    placeholder="Pick First Closing Date for event"
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="Form.ControlLastDate">
+                  <Form.Label className="text text-primary">
+                    Last Closing Date
+                  </Form.Label>
+                  <Form.Control
+                    type="date"
+                    placeholder="Pick First Closing Date for event"
+                  />
+                </Form.Group>
+              </Form>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+              <Button variant="primary" onClick={handleClose}>Save Changes</Button>
+            </Modal.Footer>
+          </Modal>
           <div style={styles.wrapper}>
             <img
               src="https://www.predicthq.com/icons/large/event-cat-lg/icon-lg-festivals.svg"
@@ -70,17 +166,16 @@ export default function AdminHome() {
               <p style={styles.name}>FESTIVAL & FOOD</p>
             </p>
           </div>
-
           <div style={styles.wrapper}>
             <Accordion flush>
               <Accordion.Item eventKey="0">
-                <Accordion.Header>
+                <Accordion.Header style={{ border: "none", outline: "none" }}>
                   <h3 style={{ marginLeft: "250px" }}>
                     Global Sourcing Fair Vietnam 2023
                   </h3>
                 </Accordion.Header>
                 <Accordion.Body>
-                  <div style={styles.wrapper}>
+                  <div style={styles.accordion}>
                     <img
                       src="https://www.predicthq.com/icons/large/event-cat-lg/icon-lg-expos.svg"
                       alt="Expos"
@@ -108,7 +203,6 @@ export default function AdminHome() {
               </Accordion.Item>
             </Accordion>
           </div>
-
           <div style={styles.wrapper}>
             <img
               src="https://www.predicthq.com/icons/large/event-cat-lg/icon-lg-concerts.svg"

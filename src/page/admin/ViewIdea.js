@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../../NavBar";
 import {
   Button,
@@ -101,8 +101,44 @@ const btn = {
     outline: 'none'
 }
 
-
 export default function AdminIdea() {
+
+  const [like, setlike] = useState(20)
+  const [likeactive, setlikeactive] = useState(false)
+
+  const [dislike, setdislike] = useState(5)
+  const [dislikeactive, setdislikeactive] = useState(false)
+
+  function likef() {
+    if(likeactive) {
+      setlikeactive(false)
+      setlike(like-1)
+    }else{
+      setlikeactive(true)
+      setlike(like+1)
+      if(dislikeactive) {
+        setdislikeactive(false)
+        setlike(like+1)
+        setdislike(dislike-1)
+      }
+    }
+  }
+
+  function dislikef() {
+    if(dislikeactive) {
+      setdislikeactive(false)
+      setdislike(dislike-1)
+    }else{
+      setdislikeactive(true)
+      setdislike(dislike+1)
+      if(likeactive) {
+        setlikeactive(false)
+        setdislike(dislike+1)
+        setlike(like-1)
+      }
+    }
+  }
+
   return (
     <>
       <body style={body}>
@@ -160,13 +196,13 @@ export default function AdminIdea() {
                   <Box>
                   <p style={my1}>Xin chao tat ca cac ban!</p>
                   <p style={postDate}>Posted on 10/03/2023</p>
-                  <Button type="button" style={btn}>
-                  <ThumbUpIcon color="success"/>
-                  <span>1</span>
+                  <Button type="button" style={btn} onClick={likef}>
+                  <ThumbUpIcon color="success" />
+                  <span>{like}</span>
                   </Button>
-                  <Button type="button" style={btn}>
+                  <Button type="button" style={btn} onClick={dislikef}>
                   <ThumbDownIcon sx={{ color: pink[500] }}/>
-                    <span>1</span>
+                    <span>{dislike}</span>
                   </Button>
                   </Box>
                 </div>
