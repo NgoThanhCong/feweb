@@ -2,11 +2,8 @@ import { Search } from "@mui/icons-material";
 import { hover } from "@testing-library/user-event/dist/hover";
 import React from "react";
 import { FormControl, NavbarBrand, NavLink } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
@@ -88,7 +85,7 @@ export default function NavBar() {
                 User Manager
               </NavLink>
               <NavLink as={Link} to={`/CreateAccount`} active>
-                CreateAccount
+                Create Account
               </NavLink>
               {/* <Form className="d-flex" style={styles.topbarcenter}> */}
               {/* <FormControl

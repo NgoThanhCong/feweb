@@ -15,10 +15,13 @@ import Dashboard from "./page/qam/Dashboard";
 import AdminIdea from "./page/admin/ViewIdea";
 import StaffIdea from "./page/staff/ViewIdea";
 import AdminEvent from "./page/admin/AdminEvent";
+import StaffEvent from "./page/staff/StaffEvent";
+import StaffCategory from "./page/staff/StaffCategory";
 
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<Login />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Header" element={<Header />} />
       <Route path="/NavBar" element={<NavBar />} />
@@ -32,6 +35,8 @@ function App() {
       <Route path="/QacIdeas" element={<QacIdeas />} />
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/StaffIdea" element={< StaffIdea/>} />
+      <Route path="/StaffEvent" element={< StaffEvent/>} />
+      <Route path="/StaffCategory" element={< StaffCategory/>} />
     </Routes>
   );
 }
