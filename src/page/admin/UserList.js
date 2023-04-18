@@ -32,8 +32,7 @@ export default function UserList() {
                         <th>Name</th>
                         <th>Role</th>
                         <th>Department</th>
-                        <th>Username</th>
-                        <th>Password</th>
+                        <th>Username</th>                 
                         <th>Email</th>
                         <th>Action</th>
                       </tr>
@@ -42,10 +41,9 @@ export default function UserList() {
                       <tr>
                         <td>1</td>
                         <td>Nguyen Thai Son</td>
-                        <td>Staff</td>
-                        <td>IT</td>
-                        <td>thaison123</td>
-                        <td>123456</td>
+                        <td>Admin</td>
+                        <td>Null</td>
+                        <td>thaisonadmin</td>
                         <td>son123@gmail.com</td>
                         <td>
                           <Button
@@ -56,7 +54,465 @@ export default function UserList() {
                             Edit
                           </Button>{" "}
                           <Modal
-                            size="sm"
+                            show={edit}
+                            onHide={() => setEdit(false)}
+                            backdrop="static"
+                            keyboard={false}
+                          >
+                            <Modal.Header closeButton>
+                              <Modal.Title className="text text-primary">
+                                Edit Account
+                              </Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                              <Form>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlName"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Name
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="text"
+                                    placeholder="Full Name"
+                                    autoFocus
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlRole"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Role
+                                  </Form.Label>
+                                  <Form.Select defaultValue="Select one">
+                                    <option>Select one</option>
+                                    <option value="1">Staff</option>
+                                    <option value="2">QAC</option>
+                                    <option value="3">QAM</option>
+                                  </Form.Select>
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlDepartment"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Department
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="text"
+                                    placeholder="Department"
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlUsername"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    UserName
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="text"
+                                    placeholder="UserName"
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlPassword"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Password
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="password"
+                                    placeholder="Password"
+                                    required
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="exampleForm.ControlInput1"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Email address
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="email"
+                                    placeholder="name@gmail.com"
+                                  />
+                                </Form.Group>
+                              </Form>
+                            </Modal.Body>
+                            <Modal.Footer>
+                              <Button
+                                variant="secondary"
+                                onClick={() => setEdit(false)}
+                              >
+                                Close
+                              </Button>
+                              <Button variant="primary">Save Changes</Button>
+                            </Modal.Footer>
+                          </Modal>
+                          <Button
+                            href="#"
+                            variant="outline-danger"
+                            onClick={handleShow}
+                          >
+                            Delete
+                          </Button>{" "}
+                          {/* <Button as="input" type="button" value="Input" />{" "}
+                          <Button as="input" type="submit" value="Submit" />{" "}
+                          <Button as="input" type="reset" value="Reset" />
+                          <Button
+                            className="btn btn-danger"
+                            onclick=" return confirm('Are you sure to delete this account ?');"
+                          >
+                            Delete
+                          </Button> */}
+                          <Modal
+                            show={show}
+                            onHide={handleClose}
+                            backdrop="static"
+                            keyboard={false}
+                          >
+                            <Modal.Header closeButton>
+                              <Modal.Title>Notification</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                              Are you sure to delete this account ?
+                            </Modal.Body>
+                            <Modal.Footer>
+                              <Button variant="secondary" onClick={handleClose}>
+                                Cancel
+                              </Button>
+                              <Button variant="primary">OK</Button>
+                            </Modal.Footer>
+                          </Modal>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Nguyen Thai Son</td>
+                        <td>Staff</td>
+                        <td>IT</td>
+                        <td>thaisonstaff</td>
+                        <td>son456@gmail.com</td>
+                        <td>
+                          <Button
+                            href="#"
+                            variant="outline-success"
+                            onClick={() => setEdit(true)}
+                          >
+                            Edit
+                          </Button>{" "}
+                          <Modal
+                            show={edit}
+                            onHide={() => setEdit(false)}
+                            backdrop="static"
+                            keyboard={false}
+                          >
+                            <Modal.Header closeButton>
+                              <Modal.Title className="text text-primary">
+                                Edit Account
+                              </Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                              <Form>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlName"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Name
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="text"
+                                    placeholder="Full Name"
+                                    autoFocus
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlRole"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Role
+                                  </Form.Label>
+                                  <Form.Select defaultValue="Select one">
+                                    <option>Select one</option>
+                                    <option value="1">Staff</option>
+                                    <option value="2">QAC</option>
+                                    <option value="3">QAM</option>
+                                  </Form.Select>
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlDepartment"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Department
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="text"
+                                    placeholder="Department"
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlUsername"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    UserName
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="text"
+                                    placeholder="UserName"
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlPassword"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Password
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="password"
+                                    placeholder="Password"
+                                    required
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="exampleForm.ControlInput1"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Email address
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="email"
+                                    placeholder="name@gmail.com"
+                                  />
+                                </Form.Group>
+                              </Form>
+                            </Modal.Body>
+                            <Modal.Footer>
+                              <Button
+                                variant="secondary"
+                                onClick={() => setEdit(false)}
+                              >
+                                Close
+                              </Button>
+                              <Button variant="primary">Save Changes</Button>
+                            </Modal.Footer>
+                          </Modal>
+                          <Button
+                            href="#"
+                            variant="outline-danger"
+                            onClick={handleShow}
+                          >
+                            Delete
+                          </Button>{" "}
+                          {/* <Button as="input" type="button" value="Input" />{" "}
+                          <Button as="input" type="submit" value="Submit" />{" "}
+                          <Button as="input" type="reset" value="Reset" />
+                          <Button
+                            className="btn btn-danger"
+                            onclick=" return confirm('Are you sure to delete this account ?');"
+                          >
+                            Delete
+                          </Button> */}
+                          <Modal
+                            show={show}
+                            onHide={handleClose}
+                            backdrop="static"
+                            keyboard={false}
+                          >
+                            <Modal.Header closeButton>
+                              <Modal.Title>Notification</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                              Are you sure to delete this account ?
+                            </Modal.Body>
+                            <Modal.Footer>
+                              <Button variant="secondary" onClick={handleClose}>
+                                Cancel
+                              </Button>
+                              <Button variant="primary">OK</Button>
+                            </Modal.Footer>
+                          </Modal>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Nguyen Thai Son</td>
+                        <td>QAC</td>
+                        <td>Null</td>
+                        <td>thaisonqac</td>
+                        <td>son789@gmail.com</td>
+                        <td>
+                          <Button
+                            href="#"
+                            variant="outline-success"
+                            onClick={() => setEdit(true)}
+                          >
+                            Edit
+                          </Button>{" "}
+                          <Modal
+                            show={edit}
+                            onHide={() => setEdit(false)}
+                            backdrop="static"
+                            keyboard={false}
+                          >
+                            <Modal.Header closeButton>
+                              <Modal.Title className="text text-primary">
+                                Edit Account
+                              </Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                              <Form>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlName"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Name
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="text"
+                                    placeholder="Full Name"
+                                    autoFocus
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlRole"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Role
+                                  </Form.Label>
+                                  <Form.Select defaultValue="Select one">
+                                    <option>Select one</option>
+                                    <option value="1">Staff</option>
+                                    <option value="2">QAC</option>
+                                    <option value="3">QAM</option>
+                                  </Form.Select>
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlDepartment"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Department
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="text"
+                                    placeholder="Department"
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlUsername"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    UserName
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="text"
+                                    placeholder="UserName"
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="Form.ControlPassword"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Password
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="password"
+                                    placeholder="Password"
+                                    required
+                                  />
+                                </Form.Group>
+                                <Form.Group
+                                  className="mb-3"
+                                  controlId="exampleForm.ControlInput1"
+                                >
+                                  <Form.Label className="text text-primary">
+                                    Email address
+                                  </Form.Label>
+                                  <Form.Control
+                                    type="email"
+                                    placeholder="name@gmail.com"
+                                  />
+                                </Form.Group>
+                              </Form>
+                            </Modal.Body>
+                            <Modal.Footer>
+                              <Button
+                                variant="secondary"
+                                onClick={() => setEdit(false)}
+                              >
+                                Close
+                              </Button>
+                              <Button variant="primary">Save Changes</Button>
+                            </Modal.Footer>
+                          </Modal>
+                          <Button
+                            href="#"
+                            variant="outline-danger"
+                            onClick={handleShow}
+                          >
+                            Delete
+                          </Button>{" "}
+                          {/* <Button as="input" type="button" value="Input" />{" "}
+                          <Button as="input" type="submit" value="Submit" />{" "}
+                          <Button as="input" type="reset" value="Reset" />
+                          <Button
+                            className="btn btn-danger"
+                            onclick=" return confirm('Are you sure to delete this account ?');"
+                          >
+                            Delete
+                          </Button> */}
+                          <Modal
+                            show={show}
+                            onHide={handleClose}
+                            backdrop="static"
+                            keyboard={false}
+                          >
+                            <Modal.Header closeButton>
+                              <Modal.Title>Notification</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                              Are you sure to delete this account ?
+                            </Modal.Body>
+                            <Modal.Footer>
+                              <Button variant="secondary" onClick={handleClose}>
+                                Cancel
+                              </Button>
+                              <Button variant="primary">OK</Button>
+                            </Modal.Footer>
+                          </Modal>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Nguyen Thai Son</td>
+                        <td>QAM</td>
+                        <td>Business</td>
+                        <td>thaisonqam</td>
+                        <td>thaison@gmail.com</td>
+                        <td>
+                          <Button
+                            href="#"
+                            variant="outline-success"
+                            onClick={() => setEdit(true)}
+                          >
+                            Edit
+                          </Button>{" "}
+                          <Modal
                             show={edit}
                             onHide={() => setEdit(false)}
                             backdrop="static"
