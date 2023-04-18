@@ -102,6 +102,86 @@ function Cat() {
                                 </div>
                             </td>
                         </tr>
+
+                        <tr>
+                            <td>Education</td>
+                            <td>
+                                <div className="row justify-content-md-center">
+                                    <div className="col-md-auto">
+                                        <DropdownButton title="Edit category" id="dropdown-basic-button" variant="warning">
+                                            <form action="" onSubmit={handleSubmit} required>
+                                                <Dropdown.ItemText>
+                                                    New Title
+                                                </Dropdown.ItemText>
+                                                <Dropdown.ItemText>
+                                                    <input type="text" className="form-control" id="newCategory" placeholder="Input here..." required/>
+                                                </Dropdown.ItemText>
+                                                <Dropdown.ItemText style={{textAlign:"center"}}>
+                                                    <button type="submit" className="btn btn-warning">
+                                                        Change
+                                                    </button>
+                                                </Dropdown.ItemText>
+                                            </form>
+                                        </DropdownButton>
+                                    </div>
+                                    
+                                    <div className="col col-lg-2">
+                                        <DropdownButton title="Delete" id="dropdown-basic-button" variant="danger">
+                                            <form action="" onSubmit={handleSubmit}>
+                                                <Dropdown.ItemText>
+                                                    Are you sure?
+                                                </Dropdown.ItemText>
+                                                <Dropdown.ItemText  style={{textAlign:"center"}}>
+                                                    <button type="submit" className="btn btn-danger" style={{ marginLeft: '.5rem' }}>
+                                                        Delete
+                                                    </button>
+                                                </Dropdown.ItemText>
+                                            </form>
+                                        </DropdownButton>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Q&A</td>
+                            <td>
+                                <div className="row justify-content-md-center">
+                                    <div className="col-md-auto">
+                                        <DropdownButton title="Edit category" id="dropdown-basic-button" variant="warning">
+                                            <form action="" onSubmit={handleSubmit} required>
+                                                <Dropdown.ItemText>
+                                                    New Title
+                                                </Dropdown.ItemText>
+                                                <Dropdown.ItemText>
+                                                    <input type="text" className="form-control" id="newCategory" placeholder="Input here..." required/>
+                                                </Dropdown.ItemText>
+                                                <Dropdown.ItemText style={{textAlign:"center"}}>
+                                                    <button type="submit" className="btn btn-warning">
+                                                        Change
+                                                    </button>
+                                                </Dropdown.ItemText>
+                                            </form>
+                                        </DropdownButton>
+                                    </div>
+                                    
+                                    <div className="col col-lg-2">
+                                        <DropdownButton title="Delete" id="dropdown-basic-button" variant="danger">
+                                            <form action="" onSubmit={handleSubmit}>
+                                                <Dropdown.ItemText>
+                                                    Are you sure?
+                                                </Dropdown.ItemText>
+                                                <Dropdown.ItemText  style={{textAlign:"center"}}>
+                                                    <button type="submit" className="btn btn-danger" style={{ marginLeft: '.5rem' }}>
+                                                        Delete
+                                                    </button>
+                                                </Dropdown.ItemText>
+                                            </form>
+                                        </DropdownButton>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </Table>
             </div>
