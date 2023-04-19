@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import {BsBoxArrowInRight, BsSearch } from "react-icons/bs";
+import { BsDownload, BsHandThumbsUp, BsHandThumbsDown, BsBoxArrowInRight, BsSearch } from "react-icons/bs";
 
 const styles = {
     avatar: {

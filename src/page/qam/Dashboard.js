@@ -1,7 +1,7 @@
 import React from "react";
-import { Navbar, Nav, Container, Table } from "react-bootstrap";
+import { Navbar, Nav, Container, Table, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { BsBoxArrowInRight } from "react-icons/bs";
+import { BsBoxArrowInRight, BsSearch } from "react-icons/bs";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 
@@ -28,7 +28,13 @@ function Dashboard() {
                         <Nav.Link as={Link} to={`/CatEditor`}>Category</Nav.Link>
                         <Nav.Link active>Dashboard</Nav.Link>
                     </Nav>
-                    <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100, color:"white"}} className="btn btn-danger">
+                    <Form className="d-flex">
+                        <Form.Control type="search" placeholder="Search" className="me-1" aria-label="Search"/>
+                        <Button variant="dark" className="me-5">
+                            <BsSearch/>
+                        </Button>
+                    </Form>
+                    <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100, height:40, color:"white"}} className="btn btn-danger">
                         <BsBoxArrowInRight/> <a style={{ marginLeft: '.5rem' }}>Logout</a> 
                     </Nav.Link>
                 </Container>

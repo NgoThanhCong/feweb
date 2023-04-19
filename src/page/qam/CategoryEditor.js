@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Navbar, Dropdown, Nav, DropdownButton, Container, Table, Button } from "react-bootstrap";
+import { Navbar, Dropdown, Nav, DropdownButton, Container, Table, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import {BsBoxArrowInRight} from "react-icons/bs";
+import {BsBoxArrowInRight, BsSearch} from "react-icons/bs";
 
 const styles = {
     avatar: {
@@ -29,7 +29,13 @@ function Cat() {
                     <Nav.Link active>Category</Nav.Link>
                     <Nav.Link as={Link} to={`/Dashboard`}>Dashboard</Nav.Link>
                 </Nav>
-                <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100, color:"white"}} className="btn btn-danger">
+                <Form className="d-flex">
+                    <Form.Control type="search" placeholder="Search" className="me-1" aria-label="Search"/>
+                    <Button variant="dark" className="me-5">
+                        <BsSearch/>
+                    </Button>
+                </Form>
+                <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100, height:40, color:"white"}} className="btn btn-danger">
                     <BsBoxArrowInRight/> <a style={{ marginLeft: '.5rem' }}>Logout</a> 
                 </Nav.Link>
             </Container>

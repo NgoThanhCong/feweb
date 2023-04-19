@@ -107,7 +107,7 @@ function QamIdeas() {
                                 <img className="round-img" style={{height:75, width:75}}
                                     src="https://i.pinimg.com/280x280_RS/2e/45/66/2e4566fd829bcf9eb11ccdb5f252b02f.jpg"
                                     alt="" />
-                                <h4>Thai Son</h4>
+                                <h4>Fat Man</h4>
                             </a>
                         </div>
 
@@ -117,6 +117,37 @@ function QamIdeas() {
                             </p>
                             <p className="post-date">
                                 Posted on 10/03/2023
+                            </p>
+                            <button onClick={likefunc} type="button" className="btn btn-light"  style={{ backgroundColor: likeActive ? "aqua" : "white" }}>
+                                <BsHandThumbsUp/>{like}
+                            </button>
+                            <button onClick={dislikefunc} type="button" className="btn btn-light" style={{ backgroundColor: dislikeActive ? "crimson" : "white" }}>
+                                <BsHandThumbsDown/>{dislike}
+                            </button>
+                            <button className="btn btn-info" value="download" style={{alignItems: "center", display:"flex", justifyContent: "center"}}> 
+                                <BsDownload/> <a style={{ marginLeft: '.5rem' }}>Download</a> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div className="posts">
+                    <div className="post bg-white p-1 my-1" style={{display:"flex", outline:"2px solid green", width:"100%"}}>
+                        <div>
+                            <a href="profile.html">
+                                <img className="round-img" style={{height:75, width:75}}
+                                    src="https://i.pinimg.com/280x280_RS/2e/45/66/2e4566fd829bcf9eb11ccdb5f252b02f.jpg"
+                                    alt="" />
+                                <h4>Little Boy</h4>
+                            </a>
+                        </div>
+
+                        <div style={{ marginLeft:10 }}>
+                            <p className="my-1">
+                                Hello There!
+                            </p>
+                            <p className="post-date">
+                                Posted on 24/03/2023
                             </p>
                             <button onClick={likefunc} type="button" className="btn btn-light"  style={{ backgroundColor: likeActive ? "aqua" : "white" }}>
                                 <BsHandThumbsUp/>{like}
