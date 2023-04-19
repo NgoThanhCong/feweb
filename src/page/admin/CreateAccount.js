@@ -163,7 +163,7 @@ export default function CreateAccount() {
                 </FloatingLabel>
                 <Form.Group as={Row} className="mb-2">
                   <Col sm={{ span: 8, offset: 2 }}>
-                    <Button variant="primary" type="submit">
+                    <Button type="submit">
                       Create
                     </Button>
                   </Col>

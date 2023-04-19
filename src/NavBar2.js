@@ -92,7 +92,7 @@ export default function NavBar2() {
             >
               <NavLink
                 as={Link}
-                to={`/AdminIdea`}
+                to={`/StaffIdea`}
                 active
                 style={{
                   alignItems: "center",

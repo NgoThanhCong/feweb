@@ -159,7 +159,7 @@ export default function AdminEvent() {
               <Button variant="secondary" onClick={handleClose}>
                 Close
               </Button>
-              <Button variant="primary" onClick={handleClose}>Save Changes</Button>
+              <Button type="submit" variant="primary" onClick={handleClose}>Save Changes</Button>
             </Modal.Footer>
           </Modal>
           <a href="/AdminIdea" style={{textDecoration:"none", color: "black"}}>

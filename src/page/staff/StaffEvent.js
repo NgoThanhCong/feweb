@@ -80,94 +80,9 @@ export default function StaffEvent() {
       <Container className="mt-3">
         <section style={styles.section}>
           <h1 className="text-center">Events</h1>
-          <Button
-            style={{
-              fontSize: "20px",
-              position: "fixed",
-              top: "100px",
-              right: "270px",
-            }}
-            variant="success"
-            onClick={handleShow}
-          >
-            Create Event
-          </Button>
-          <Modal
-            size="auto"
-            show={show}
-            onHide={handleClose}
-            backdrop="static"
-            keyboard={false}
-          >
-            <Modal.Header closeButton>
-              <Modal.Title className="text text-primary">
-                Create Event
-              </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <Form>
-                <Form.Group className="mb-3" controlId="Form.ControlRole">
-                  <Form.Label className="text text-primary">Manager</Form.Label>
-                  <Form.Select defaultValue="Select one">
-                    <option>Select one</option>
-                    <option value="1">Staff</option>
-                    <option value="2">QAC</option>
-                    <option value="3">QAM</option>
-                  </Form.Select>
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="Form.ControlName">
-                  <Form.Label className="text text-primary">Name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Name of event"
-                    autoFocus
-                  />
-                </Form.Group>
-
-                <Form.Group
-                  className="mb-3"
-                  controlId="Form.ControlDescription"
-                >
-                  <Form.Label className="text text-primary">
-                    Description
-                  </Form.Label>
-                  <Form.Control
-                    type="description"
-                    as="textarea"
-                    placeholder="Description of event"
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="Form.ControlFirstDate">
-                  <Form.Label className="text text-primary">
-                    First Closing Date
-                  </Form.Label>
-                  <Form.Control
-                    type="date"
-                    placeholder="Pick First Closing Date for event"
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="Form.ControlLastDate">
-                  <Form.Label className="text text-primary">
-                    Last Closing Date
-                  </Form.Label>
-                  <Form.Control
-                    type="date"
-                    placeholder="Pick First Closing Date for event"
-                  />
-                </Form.Group>
-              </Form>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
-              </Button>
-            </Modal.Footer>
-          </Modal>
+          
           <a
-            href="/AdminIdea"
+            href="/StaffIdea"
             style={{ textDecoration: "none", color: "black" }}
           >
             <div style={styles.wrapper}>
@@ -186,7 +101,7 @@ export default function StaffEvent() {
             </div>
           </a>
           <a
-            href="/AdminIdea"
+            href="/StaffIdea"
             style={{ textDecoration: "none", color: "black" }}
           >
             <div style={styles.wrapper}>
@@ -215,7 +130,7 @@ export default function StaffEvent() {
             </div>
           </a>
           <a
-            href="/AdminIdea"
+            href="/StaffIdea"
             style={{ textDecoration: "none", color: "black" }}
           >
             <div style={styles.wrapper}>
