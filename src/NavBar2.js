@@ -60,9 +60,10 @@ const styles = {
 export default function NavBar2() {
   const [show, setShow] = useState(false);
   const [profile, setProfile] = useState(false);
+  const [pass, setPass] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  //   const handleClose = () => setShow(false);
+  //   const handleShow = () => setShow(true);
 
   return (
     <>
@@ -141,11 +142,20 @@ export default function NavBar2() {
               style={{ marginRight: "100px" }}
               title={<PersonIcon fontSize="large" style={{ color: "white" }} />}
             >
-              <Dropdown.Item
-                style={{ fontSize: "20px" }}
-                onClick={() => setProfile(true)}
-              >
-                View Profile
+              <Dropdown.Item>
+                <Button
+                  style={{
+                    fontSize: "20px",
+                    backgroundColor: "white",
+                    border: "none",
+                    color: "Black",
+                    paddingLeft: "0",
+                  }}
+                  onClick={() => setProfile(true)}
+                >
+                  View Profile
+                </Button>
+
                 <Modal
                   show={profile}
                   onHide={() => setProfile(false)}
@@ -154,7 +164,9 @@ export default function NavBar2() {
                   <Modal.Header closeButton>
                     <Modal.Title className="text text-primary">
                       Profile
-                      <h6 style={{color:"grey"}}>Update your personal details</h6>
+                      <h6 style={{ color: "grey" }}>
+                        Update your personal details
+                      </h6>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
@@ -232,7 +244,64 @@ export default function NavBar2() {
                     >
                       Close
                     </Button>
-                    <Button variant="primary">Save Changes</Button>
+                    <Button
+                      variant="primary"
+                      as="input"
+                      type="submit"
+                      value="Save Changes"
+                      onClick={() => setProfile(false)}
+                    />
+                  </Modal.Footer>
+                </Modal>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Button style={{
+                    fontSize: "20px",
+                    backgroundColor: "white",
+                    border: "none",
+                    outline: "none",
+                    color: "Black",
+                    paddingLeft: "0",
+                  }} variant="primary" onClick={() => setPass(true)}>
+                  Change password
+                </Button>
+
+                <Modal show={pass} onHide={() => setPass(false)}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Change The Password</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <Form>
+                      <Form.Group
+                        className="mb-3"
+                        controlId="exampleForm.ControlPassword1"
+                      >
+                        <Form.Label>Curent Password</Form.Label>
+                        <Form.Control
+                          type="password"
+                          placeholder="Enter your current password"
+                          autoFocus
+                        />
+                      </Form.Group>
+                      <Form.Group
+                        className="mb-3"
+                        controlId="exampleForm.ControlPassword2"
+                      >
+                        <Form.Label>New Password</Form.Label>
+                        <Form.Control
+                          type="password"
+                          placeholder="Enter your new password"
+                        />
+                      </Form.Group>
+                    </Form>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setPass(false)}>
+                      Close
+                    </Button>
+                    <Button variant="primary" onClick={() => setPass(false)}>
+                      Save Changes
+                    </Button>
                   </Modal.Footer>
                 </Modal>
               </Dropdown.Item>
@@ -253,12 +322,12 @@ export default function NavBar2() {
                   }}
                 >
                   <LogoutIcon
-                    onClick={handleShow}
+                    onClick={() => setShow(true)}
                     fontSize="large"
                     style={{ marginRight: "50px" }}
                   />
                   <span
-                    onClick={handleShow}
+                    onClick={() => setShow(true)}
                     style={{
                       marginLeft: "-45px",
                       fontSize: "20px",
@@ -268,7 +337,7 @@ export default function NavBar2() {
                   </span>
                   <Modal
                     show={show}
-                    onHide={handleClose}
+                    onHide={() => setShow(false)}
                     backdrop="static"
                     keyboard={false}
                   >
@@ -277,14 +346,17 @@ export default function NavBar2() {
                     </Modal.Header>
                     <Modal.Body>Do you want to log out?</Modal.Body>
                     <Modal.Footer>
-                      <Button variant="secondary" onClick={handleClose}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => setShow(false)}
+                      >
                         No
                       </Button>
                       <Button
                         as={Link}
                         to={`/Login`}
                         variant="primary"
-                        onClick={handleClose}
+                        onClick={() => setShow(false)}
                       >
                         Yes
                       </Button>

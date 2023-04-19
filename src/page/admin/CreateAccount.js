@@ -137,7 +137,7 @@ export default function CreateAccount() {
                 
                 <FloatingLabel
                   controlId="floatingConfirmPassword"
-                  label="ConfirmPassword"
+                  label="Confirm Password"
                   className="text text-success mb-3"
                   htmlFor="inputConfirmPassword"
                 >

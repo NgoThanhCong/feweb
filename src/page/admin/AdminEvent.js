@@ -27,7 +27,7 @@ const styles = {
     border: "5px solid #e6e6e6",
     padding: "40px 25px",
     marginBottom: "20px",
-    paddingBottom: "10px",
+    paddingBottom: "0",
   },
   avatar: {
     margin: "-40px auto 0px",
@@ -47,7 +47,10 @@ const styles = {
     fontWeight: 600,
     fontSize: "1rem",
   },
-  position: { fontWeight: 400 },
+  position: { 
+    fontWeight: 400,
+    marginTop:"-5px"
+  },
   body: {
     fontFamily: ("Montserrat", "sans-serif"),
     lineHeight: "1.7",
@@ -64,6 +67,13 @@ const styles = {
     marginBottom: "20px",
     paddingBottom: "10px",
   },
+  postDate: {
+    fontFamily: "'Lora', serif",
+    fontStyle: "italic",
+    fontSize: "13px",
+    fontWeight: "400",
+    color: "#999999",
+  }
 };
 
 export default function AdminEvent() {
@@ -81,7 +91,7 @@ export default function AdminEvent() {
             Create Event
           </Button>
           <Modal
-            size="auto"
+            size="auto"   
             show={show}
             onHide={handleClose}
             backdrop="static"
@@ -168,17 +178,8 @@ export default function AdminEvent() {
             </p>
           </div>
           </a>
-          <div style={styles.wrapper}>
             <a href="/AdminIdea" style={{textDecoration:"none", color: "black"}}>
-            <Accordion flush>
-              <Accordion.Item eventKey="0">
-                <Accordion.Header style={{ border: "none", outline: "none" }}>
-                  <h3 style={{ marginLeft: "250px" }}>
-                    Global Sourcing Fair Vietnam 2023
-                  </h3>
-                </Accordion.Header>
-                <Accordion.Body>
-                  <div style={styles.accordion}>
+                  <div style={styles.wrapper}>
                     <img
                       src="https://www.predicthq.com/icons/large/event-cat-lg/icon-lg-expos.svg"
                       alt="Expos"
@@ -202,16 +203,12 @@ export default function AdminEvent() {
                       <p style={styles.name}> EXPO & HOUSEHOLD</p>
                     </p>
                   </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
             </a>
-          </div>
           <a href="/AdminIdea" style={{textDecoration:"none", color: "black"}}>
           <div style={styles.wrapper}>
             <img
               src="https://www.predicthq.com/icons/large/event-cat-lg/icon-lg-concerts.svg"
-              alt="Expos"
+              alt="Concerts"
               style={styles.avatar}
             />
             {/* <svg viewBox="0 0 24 24" style={styles.avatar}>

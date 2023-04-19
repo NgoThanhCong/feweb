@@ -27,7 +27,7 @@ const styles = {
     border: "5px solid #e6e6e6",
     padding: "40px 25px",
     marginBottom: "20px",
-    paddingBottom: "10px",
+    paddingBottom: "0"
   },
   avatar: {
     margin: "-40px auto 0px",
@@ -47,7 +47,9 @@ const styles = {
     fontWeight: 600,
     fontSize: "1rem",
   },
-  position: { fontWeight: 400 },
+  position: { 
+    fontWeight: 400, 
+    marginTop: "-5px" },
   body: {
     fontFamily: ("Montserrat", "sans-serif"),
     lineHeight: "1.7",
@@ -183,26 +185,17 @@ export default function StaffEvent() {
               </p>
             </div>
           </a>
-          <div style={styles.wrapper}>
-            <a
-              href="/AdminIdea"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <Accordion flush>
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header style={{ border: "none", outline: "none" }}>
-                    <h3 style={{ marginLeft: "250px" }}>
-                      Global Sourcing Fair Vietnam 2023
-                    </h3>
-                  </Accordion.Header>
-                  <Accordion.Body>
-                    <div style={styles.accordion}>
-                      <img
-                        src="https://www.predicthq.com/icons/large/event-cat-lg/icon-lg-expos.svg"
-                        alt="Expos"
-                        style={styles.avatar}
-                      />
-                      {/* <svg viewBox="0 0 24 24" style={styles.avatar}>
+          <a
+            href="/AdminIdea"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <div style={styles.wrapper}>
+              <img
+                src="https://www.predicthq.com/icons/large/event-cat-lg/icon-lg-expos.svg"
+                alt="Expos"
+                style={styles.avatar}
+              />
+              {/* <svg viewBox="0 0 24 24" style={styles.avatar}>
                       <path
                         fill="#2e1091"
                         d="M21.5 4H13V1h-2v3H2.5A1.5 1.5 0 001 5.5v12A1.5 1.5 0 002.5 19h6.31L7.1 22.57l1.8.86L11 19h2l2.13 4.43 1.8-.86L15.19 19h6.31a1.5 1.5 0 001.5-1.5v-12A1.5 1.5 0 0021.5 4zM21 17H3V6h18z"
@@ -212,19 +205,15 @@ export default function StaffEvent() {
                         d="M5.27 14.18V9h3.56v1H6.41v1h2.08v1H6.41v1.14h2.42v1zm8.9 0h-1.32l-1.13-1.93-1.1 1.93H9.36L11 11.47 9.44 9h1.33l1 1.76 1-1.76H14l-1.61 2.54zm.69 0V9h2.48a1.76 1.76 0 01.66.12 1.58 1.58 0 01.5.34 1.55 1.55 0 01.31.53 2 2 0 010 1.36 1.5 1.5 0 01-.31.52 1.61 1.61 0 01-.5.35 1.76 1.76 0 01-.66.12H16v1.89zM16 11.3h1.2a.55.55 0 00.4-.13.5.5 0 00.15-.39v-.33a.46.46 0 00-.15-.38.56.56 0 00-.4-.14H16z"
                       ></path>
                     </svg> */}
-                      <div>
-                        <h3>Global Sourcing Fair Vietnam 2023</h3>
-                      </div>
-                      <p style={styles.position}>
-                        Vietnam
-                        <p style={styles.name}> EXPO & HOUSEHOLD</p>
-                      </p>
-                    </div>
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
-            </a>
-          </div>
+              <div>
+                <h3>Global Sourcing Fair Vietnam 2023</h3>
+              </div>
+              <p style={styles.position}>
+                Vietnam
+                <p style={styles.name}> EXPO & HOUSEHOLD</p>
+              </p>
+            </div>
+          </a>
           <a
             href="/AdminIdea"
             style={{ textDecoration: "none", color: "black" }}
