@@ -118,7 +118,7 @@ function QamIdeas() {
                             <p className="post-date">
                                 Posted on 10/03/2023
                             </p>
-                            <button onClick={likefunc} type="button" className="btn btn-light"  style={{ backgroundColor: likeActive ? "aqua" : "white" }}>
+                            <button onClick={likefunc} type="button" className="btn btn-light"  style={{ backgroundColor: likeActive ? "LawnGreen" : "white" }}>
                                 <BsHandThumbsUp/>{like}
                             </button>
                             <button onClick={dislikefunc} type="button" className="btn btn-light" style={{ backgroundColor: dislikeActive ? "crimson" : "white" }}>
@@ -149,7 +149,7 @@ function QamIdeas() {
                             <p className="post-date">
                                 Posted on 24/03/2023
                             </p>
-                            <button onClick={likefunc} type="button" className="btn btn-light"  style={{ backgroundColor: likeActive ? "aqua" : "white" }}>
+                            <button onClick={likefunc} type="button" className="btn btn-light"  style={{ backgroundColor: likeActive ? "LawnGreen" : "white" }}>
                                 <BsHandThumbsUp/>{like}
                             </button>
                             <button onClick={dislikefunc} type="button" className="btn btn-light" style={{ backgroundColor: dislikeActive ? "crimson" : "white" }}>

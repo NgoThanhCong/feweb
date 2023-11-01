@@ -77,7 +77,7 @@ function QacIdeas() {
                             <BsSearch/>
                         </Button>
                     </Form>
-                    <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100, color:"white"}} className="btn btn-danger"> 
+                    <Nav.Link href={`Login`} style={{alignItems: "center", display:"flex", justifyContent: "center", fontSize:20, width:100, height:40, color:"white"}} className="btn btn-danger"> 
                         <BsBoxArrowInRight/> <a style={{ marginLeft: '.5rem' }}>Logout</a>
                     </Nav.Link>
                 </Container>
@@ -117,7 +117,7 @@ function QacIdeas() {
                             <p className="post-date">
                                 Posted on 10/03/2023
                             </p>
-                            <button onClick={likefunc} type="button" className="btn btn-light"  style={{ backgroundColor: likeActive ? "aqua" : "white" }}>
+                            <button onClick={likefunc} type="button" className="btn btn-light"  style={{ backgroundColor: likeActive ? "LawnGreen" : "white" }}>
                                 <BsHandThumbsUp/>{like}
                             </button>
                             <button onClick={dislikefunc} type="button" className="btn btn-light" style={{ backgroundColor: dislikeActive ? "crimson" : "white" }}>
@@ -148,7 +148,7 @@ function QacIdeas() {
                             <p className="post-date">
                                 Posted on 24/03/2023
                             </p>
-                            <button onClick={likefunc} type="button" className="btn btn-light"  style={{ backgroundColor: likeActive ? "aqua" : "white" }}>
+                            <button onClick={likefunc} type="button" className="btn btn-light"  style={{ backgroundColor: likeActive ? "LawnGreen" : "white" }}>
                                 <BsHandThumbsUp/>{like}
                             </button>
                             <button onClick={dislikefunc} type="button" className="btn btn-light" style={{ backgroundColor: dislikeActive ? "crimson" : "white" }}>
